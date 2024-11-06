@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "7e1d58de-a689-4518-b444-947f983a4eaf",
+		"name": "PT BUANA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9652902"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"protocolProfileBehavior": {
+				"protocolVersion": "auto"
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "jabatan",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "laporan",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "csrf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/csrf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"csrf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All-Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "xxuXmzUiBtt1LkQZMMLyCaRdDaLgk_eHlOocwx44WhK9aiiE_i2n-g1AYr1YTCAoAO_GOZU4IJuEp5KqpN9-8i5ZYiPfWUvg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Monkey D. Luffy\",\r\n    \"password\": \"Yuhu123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tambah-Anggota",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "76YT9own--FRkuP4872lmXWURCDFWZz4o6VnlV5p5B0p-uy-qDbrv-GYZu-qY0nejy73lcNshueCb-tErWoGmWL0AKgiEH4NfhCPTnWbfzoDnqZO4_s6-TGm7idubBWpgG6PmqqJoQt1gaDSLH8wadkKKeCCYHTpZ35aDHI3ESYffweDRIDVDHccJus6qkhJS2eC9IECzUw0u51491tge0UkDIKSf4VU-b5yiz4_x3VCXkEOIabGExRThsCiheGz7H6IJ0uVsXkpMRZfxiCDm97lAtOvikJFYCT7EWuWUfq_qpsollYZ81Slh8yQq90Tjh55hk3K_WuvswZ7PQIgmg5KT-OH_SzzU8BamcWsZ_CmwcyqzOuDH_udcRhmZrzNwud9w9eCwE1YCt6NWNiBlZGMWob-b99LBhl9HxNT6OKYqyXuIV71wUkC017HTYM3mA61S9iedqAF437aLG4sng_alXUXmhYeQwt7c0ViQgxqagdld3clpyjUBcPeJIxN04sxQ65SiF-Us4706gzM1Ad3UQdEvhRbodDA24B-s3e9_NcV9LHTO71nP3eukJKBQmti0ZGgpHuZdY7VmDkPosD7qyBYubdFLQN6coOsMLgPdTF6F7Fm46DWGYWVPrOGBq-JSVjwwt98subcQtMAGn25h81Z3MR2_1avicyTvPEvAy66eycTZLHAp8ftgiqdOxAFkhfyE3sOcAMKHJCvL4GL_-BE5AGxX0b7HAryw_bNR2BwrjrhXukbCyatgfaS4IN4wtY22lJs3arSKY8EXulS4th5HCtq4xOD7oFZ36qzaYF_JgsP2qBK9Ez06XYYg5H7tPzFyqc6HwB3ZyIr-2fTvTwjPjS1rMAiQmEdLPSz3Zb6Ms5h4pR3fqU2MT7_4B8GUN4zIgiDZNlSup5az-tqoqAQ4bfMg9bT9UDEJlCzdO6_5JAD5zwnkVVmrZXRynK_zZHAIdvQKA6K13ay2Ikv96DdLIQBxF5PrhOiMuVSIi90LnvAOSXRO0pR2fkHgLRrqgP51xU6ASDr9Qbet_DtkCYU9_qrGAkGAJ9OaK30FTGhPjg8YDxCJUl8J0rwDMi9SkFuX4NdkhwRfQj1h8A6hBt76OgytGwoOApNX9rgB80SttcT-A1Ggxo1CzdKWNP-REAB7vXO5KyClgnZThrthiZsBUIop3Hm8byhSJCWw3EhBmy9dFmhI7vz_O5b4Qlpv2Df96XI3vBgzycy5BWBqVLq10BCcXVC7lxnAtXTq2rGO_Qcw5DNUrSVrYbfq42xZsrTC1AvKon9o48ss4bFjH0SbJW8ILHgrabFYv6KO5gRXCE0XUAXqdbz_hG_dyegtnxIoxiuf9VCr1HELrTzENhBgDmWeCkb5GiswBx8rGN_JCZJHCxREnQuOHY9AwAR11KVX4DuULwF58dAGpYR_ybxg8y7mTuemGEVK0UR22cC1p23r9gQ0ETVl7khhvPjd8sfShn32aTQBSgGt9vDzEndDM2N321f7ZC35FVt_PEfeFwPRtv-U-58GWZPdtgsp8OvSP_STIDrNP_oeje7kqom5oOkFOBGN0-L7bcqmoY_0hjX7rzS9qUcWl7DEH5aEImv85C4xhLocl9J3XSoKjJIF3NZb_3kWPa6j658iHH1ER-vVGaIhpOsc1MU3AiCMZN6ekLmyKDArforhK9wmT0VicuFQ9d1aaYFtJFITmQQtXS2idEqsd7SEOcRbGQ2s_Y5pz_GixtL6cmZ1q6GiNBjV00FEmVgsFeM6GlJXEKN9qNsAz5Pb73qmeG8UIIZ2vckLM90U1zKg1BLKpAGR275Kq5v",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "Antman",
+							"type": "text"
+						},
+						{
+							"key": "nama",
+							"value": "Antman",
+							"type": "text"
+						},
+						{
+							"key": "jabatan",
+							"value": "Staff",
+							"type": "text"
+						},
+						{
+							"key": "laporan",
+							"value": "Wwkwkwk",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "antman@example.com",
+							"type": "text"
+						},
+						{
+							"key": "foto",
+							"type": "file",
+							"src": "postman-cloud:///1ef9acc8-a96a-48b0-a60d-30ffa51529cb"
+						},
+						{
+							"key": "password",
+							"value": "zxcv123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "JHMNiZ3bZDkPWOHB5NEjJ0r-3GlQnxegI-xWFyGVsgnXwkYpQhE_7_u9U18iOtjz1fwXHn-c8VBoqSWNQd1kIEX20Di29XAb",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "jmMuxvZ6_NPSHZevaaJVHtC371_JUJRVFUJVCQxOXXh47QIeuAcdpMVOmub_KvOdCo9hJ-KOwj78aaF4LCEwOz99OxodiDd7",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/users/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
